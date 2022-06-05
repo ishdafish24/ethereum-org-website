@@ -309,6 +309,10 @@ const StablecoinsPage = ({ data }) => {
       DUSD: { type: CRYPTO, url: "https://dusd.finance/" },
       PAXG: { type: ASSET, url: "https://www.paxos.com/paxgold/" },
       AMPL: { type: ALGORITHMIC, url: "https://www.ampleforth.org/" },
+      FRAX: { type: ALGORITHMIC, url: "https://frax.finance/" },
+      MIM: { type: ALGORITHMIC, url: "https://abracadabra.money/" },
+      USDP: { type: FIAT, url: "https://paxos.com/usdp/" },
+      FEI: { type: ALGORITHMIC, url: "https://fei.money/" },
     }),
     [ALGORITHMIC, ASSET, CRYPTO, FIAT]
   )
@@ -316,15 +320,29 @@ const StablecoinsPage = ({ data }) => {
   useEffect(() => {
     ;(async () => {
       try {
-        // No option to filter by stablecoins, so fetching the top tokens by market cap
-        const data = await getData(
-          "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=250&page=1&sparkline=false"
+        // Fetch token data in the Ethereum ecosystem
+        const ethereumData = await getData(
+          "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&category=ethereum-ecosystem&order=market_cap_desc&per_page=100&page=1&sparkline=false"
         )
-        const markets = data
-          .filter((token) =>
-            Object.keys(stablecoins).includes(token.symbol.toUpperCase())
-          )
-          .slice(0, 10)
+        // Fetch token data for stablecoins
+        const stablecoinData = await getData(
+          "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&category=stablecoins&order=market_cap_desc&per_page=100&page=1&sparkline=false"
+        )
+
+        // Get the intersection of stablecoins and Ethereum tokens to only have a list of data for stablecoins in the Ethereum ecosystem
+        const ethereumStablecoinData = stablecoinData.filter(
+          (stablecoin) =>
+            ethereumData.findIndex(
+              // eslint-disable-next-line eqeqeq
+              (etherToken) => stablecoin.id == etherToken.id
+            ) > -1
+        )
+
+        // Filter stablecoins that aren't in stablecoins useMemo above, and then map the type of stablecoin and url for the filtered stablecoins
+        const markets = ethereumStablecoinData
+          .filter((token) => {
+            return stablecoins[token.symbol.toUpperCase()]
+          })
           .map((token) => {
             return {
               name: token.name,
@@ -406,7 +424,7 @@ const StablecoinsPage = ({ data }) => {
         translateMessageId("page-stablecoins-precious-metals-con-1", intl),
         translateMessageId("page-stablecoins-precious-metals-con-2", intl),
       ],
-      links: [{ text: "Digix", url: "https://digix.global/" }],
+      links: [{ text: "Pax Gold", url: "https://paxos.com/paxgold/" }],
     },
     {
       title: translateMessageId("page-stablecoins-algorithmic", intl),
@@ -460,7 +478,7 @@ const StablecoinsPage = ({ data }) => {
 
   const dapps = [
     {
-      background: "linear-gradient(225deg, #AA589B 0%, #5CB8C4 100%)",
+      background: "linear-gradient(225deg, #aa589b 0%, #5cb8c4 100%)",
       url: "https://aave.com",
       alt: translateMessageId("aave-logo", intl),
       image: getImage(data.aave),
@@ -471,7 +489,7 @@ const StablecoinsPage = ({ data }) => {
       ),
     },
     {
-      background: "#F9FAFB",
+      background: "#f9fafb",
       url: "https://compound.finance",
       alt: translateMessageId("compound-logo", intl),
       image: getImage(data.compound),
@@ -493,7 +511,7 @@ const StablecoinsPage = ({ data }) => {
       ),
     },
     {
-      background: "linear-gradient(135deg, #C7EFE6 0%, #EEEAC7 100%)",
+      background: "linear-gradient(135deg, #c7efe6 0%, #eeeac7 100%)",
       url: "https://oasis.app",
       alt: translateMessageId("oasis-logo", intl),
       image: getImage(data.oasis),

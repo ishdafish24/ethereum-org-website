@@ -206,7 +206,7 @@ Documento de diseño que proporciona información a la comunidad de Ethereum, de
 
 El registro ENS es un único [contrato inteligente](#smart-contract) central que proporciona una asignación de nombres de dominio a propietarios y resolutores, como se describe en [EIP](#eip) 137.
 
-[Más información en github.com](https://github.com/ethereum/ens)
+[Más información en ens.domains](https://ens.domains)
 
 ### entropía {#entropy}
 
@@ -704,7 +704,7 @@ Una [bifurcación dura](#hard-fork) de la blockchain de Ethereum, que se produjo
 
 Una red que se utiliza para simular el comportamiento de la red principal de Ethereum (consulta [red principal](#mainnet)).
 
-<DocLink to="/developers/docs/networks/#testnets">
+<DocLink to="/developers/docs/networks/#ethereum-testnets">
   Redes de pruebas
 </DocLink>
 

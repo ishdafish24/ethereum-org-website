@@ -1057,7 +1057,7 @@ const DappsPage = ({ data, location }) => {
       url: "https://uniswap.exchange/swap",
       image: getImage(data.uniswapec),
       alt: translateMessageId("page-dapps-uniswap-logo-alt", intl),
-      background: "#212F46",
+      background: "#212f46",
       type: FINANCE,
       pillColor: "tagMint",
     },
@@ -1096,7 +1096,7 @@ const DappsPage = ({ data, location }) => {
       url: "https://pooltogether.com",
       image: getImage(data.pooltogetherec),
       alt: translateMessageId("page-dapps-pooltogether-logo-alt", intl),
-      background: "#7E4CF2",
+      background: "#7e4cf2",
       type: FINANCE,
       pillColor: "tagMint",
     },
@@ -1225,7 +1225,7 @@ const DappsPage = ({ data, location }) => {
                 onClick={() => handleCategorySelect(key, false)}
               >
                 <Emoji mr={`1rem`} text={category.emoji} />
-                <OptionText fontSize={"24px"}>{category.title}</OptionText>
+                <OptionText>{category.title}</OptionText>
               </Option>
             )
           })}

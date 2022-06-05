@@ -51,6 +51,8 @@ A specific layer 2 instance may be open and shared by many applications, or may 
 - Any updates to scalability should not be at the expense of decentralization or security – layer 2 builds on top of Ethereum.
 - There are application specific layer 2 networks that bring their own set of efficiencies when working with assets at scale.
 
+[More on layer 2](/layer-2/).
+
 #### Rollups {#rollups}
 
 Rollups perform transaction execution outside layer 1 and then the data is posted to layer 1 where consensus is reached. As transaction data is included in layer 1 blocks, this allows rollups to be secured by native Ethereum security.
@@ -77,6 +79,12 @@ Learn more about [Sidechains](/developers/docs/scaling/sidechains/).
 A plasma chain is a separate blockchain that is anchored to the main Ethereum chain, and uses fraud proofs (like [optimistic rollups](/developers/docs/scaling/optimistic-rollups/)) to arbitrate disputes.
 
 Learn more about [Plasma](/developers/docs/scaling/plasma/).
+
+### Validium {#validium}
+
+A Validium chain uses validity proofs like zero-knowledge rollups but data is not stored on the main layer 1 Ethereum chain. This can lead to 10k transactions per second per Validium chain and multiple chains can be run in parallel.
+
+Learn more about [Validium](/developers/docs/scaling/validium/).
 
 ## Why are so many scaling solutions needed? {#why-do-we-need-these}
 

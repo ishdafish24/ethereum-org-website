@@ -67,7 +67,7 @@ const StyledCard = styled(Card)`
 
   &:hover {
     border-radius: 4px;
-    box-shadow: 0px 8px 17px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 8px 17px rgba(#000000, 0.15);
     background: ${(props) => props.theme.colors.tableBackgroundHover};
     transition: transform 0.1s;
     transform: scale(1.02);
@@ -625,6 +625,23 @@ const Eth2IndexPage = ({ data }) => {
                 </Link>
               </p>
             </ExpandableCard>
+            <ExpandableCard
+              contentPreview={translateMessageId(
+                "page-upgrades-question-11-desc",
+                intl
+              )}
+              title={translateMessageId(
+                "page-upgrades-question-11-title",
+                intl
+              )}
+            >
+              <p>
+                <Translation id="page-upgrades-question-11-answer-1" />
+                <Link to="/security/#eth2-token-scam/">
+                  <Translation id="page-upgrades-question-11-answer-2" />
+                </Link>
+              </p>
+            </ExpandableCard>
           </LeftColumn>
           <RightColumn>
             <ExpandableCard
@@ -765,7 +782,7 @@ const Eth2IndexPage = ({ data }) => {
               </p>
               <p>
                 <Translation id="page-upgrades-question-9-answer-3" />{" "}
-                <Link to="/upgrades/get-involved/bug-bounty/">
+                <Link to="/bug-bounty/">
                   <Translation id="page-upgrades-bug-bounty" />
                 </Link>
               </p>

@@ -36,7 +36,7 @@ Editor EIP ditugaskan mengulas EIP untuk melihat kesehatan teknisnya, kesesuaian
 - Nick Savers (Komunitas)
 - Micah Zoltu (Komunitas)
 
-Editor EIP bersama dengan anggota komunitas [Ethereum Cat Herders](https://ethereumcatherders.com/) dan [Ethereum Magicians](https://ethereum-magicians.org/) yang memutuskan EIP mana yang akan diimplementasikan, bertanggung jawab dalam mempermudah proses EIP serta memajukan EIP ke tahap "Akhir" atau "Ditarik".
+Editor EIP bersama dengan anggota komunitas dari [Ethereum Cat Herders](https://ethereumcatherders.com/) dan [Ethereum Magicians](https://ethereum-magicians.org/) memutuskan EIP mana yang akan di implementasikan, yang akan bertanggung jawab untuk memfasilitasi EIP juga memindakan EIP ke tahap "Final" atau "Penarikan".
 
 Proses standardisasi lengkap yang disertai dengan bagan dideskripsikan dalam [EIP-1](https://eips.ethereum.org/EIPS/eip-1)
 
@@ -62,6 +62,6 @@ Lihat juga:
 
 <cite class="citation">
 
-Isi halaman yang disediakan ini merupakan bagian dari [Ethereum Protocol Development Governance and Network Upgrade Coordination](https://hudsonjameson.com/2020-03-23-ethereum-protocol-development-governance-and-network-upgrade-coordination/) oleh Hudson Jameson
+Isi halaman yang disediakan ini merupakan bagian dari [Tata Kelola Pengembangan Protokol Ethereum dan Peningkatan Jaringan Coordination](https://hudsonjameson.com/2020-03-23-ethereum-protocol-development-governance-and-network-upgrade-coordination/) oleh Hudson Jameson
 
 </cite>

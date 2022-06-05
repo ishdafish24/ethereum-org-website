@@ -214,7 +214,7 @@ Dokument projektowy dostarczający informacji społeczności Ethereum, opisując
 
 Rejestr ENS jest pojedynczym centralnym [kontraktem](#smart-contract), który dostarcza mapowanie od nazw domen do właścicieli i resolverów, jak opisano w [EIP](#eip) 137.
 
-[Przeczytaj więcej na github.com](https://github.com/ethereum/ens)
+[Przeczytaj więcej na ens.domains](https://ens.domains)
 
 ### entropia {#entropy}
 
@@ -718,7 +718,7 @@ Nazwa [etheru](#ether). 1 szabo = 10<sup>12</sup> [wei](#wei), 10<sup>6</sup> sz
 
 Skrót od nazwy „sieć testowa”, służy do symulowania zachowania głównej sieci Ethereum (patrz [sieć główna](#mainnet)).
 
-<DocLink to="/developers/docs/networks/#testnets">
+<DocLink to="/developers/docs/networks/#ethereum-testnets">
   Sieci testowe
 </DocLink>
 

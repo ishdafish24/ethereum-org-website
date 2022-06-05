@@ -7,7 +7,7 @@ import Translation from "../components/Translation"
 import Link from "../components/Link"
 import { Page, Content } from "../components/SharedStyledComponents"
 
-import languageMetadata from "../data/translations"
+import { languageMetadata } from "../utils/languages"
 import { translateMessageId } from "../utils/translations"
 import { CardItem as LangItem } from "../components/SharedStyledComponents"
 import Icon from "../components/Icon"
